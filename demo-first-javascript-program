@@ -1,0 +1,50 @@
+Author Suruj Kalita
+Date: 13 Oct 2022
+
+/*HTML - CODES*/
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo-button-style.css">
+   </head>
+
+<body>
+    <h1>Get a Messge From The Almighty</h1>
+    <buttton class="main">CLICK HERE !</buttton>
+    <script src="script.js"></script>
+</body>
+</html>
+
+/*JAVASCRIPT - CODES*/
+
+let CLICK = document.querySelector('.main');
+CLICK.addEventListener('click' , showMsg);
+
+function showMsg(){
+    alert("Hello Man Suruj This Side!")
+}
+
+
+/*css - codes*/
+
+.main{
+    font-family: 'helvetica neue', helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid rgb(255, 232, 28);
+    background: rgb(255, 232, 28);
+    color: rgba(0,0,200,0.6);
+    box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+

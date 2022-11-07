@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let lecture = 10;
+        // let section = 3;
+        // let title = 'Javascript';
+
+        // //Its not a efficient method to declare objects
+        // const course = {
+        //     lecture: 10,
+        //     section: 3,
+        //     title: 'Javascript',
+        //     notes: {
+        //         introduction: "Welcome to Js Course"
+        //     },
+        //     enroll() {
+        //         console.log('you are successfully enrolled');
+        //     }
+        // }
+
+        // course.enroll()
+        // console.log(course)
+
+
+
+        //Factory Function  <naming convention>
+        // function createCourse(title){
+        //     return {
+        //         title: title,
+        //         enroll() {
+        //             console.log("You are succesfully enrolled");
+        //         }
+        //     }
+        // }
+
+
+        // Constructor Function
+
+        // function Course(title){
+        //     this.title = title,
+        //     this.enroll = function(){
+        //         console.log('you are successfully enrolled');
+        //     }
+        // }
+        
+        // const course = new Course('Javascript'); // new keyword point to an empty object
+        // console.log(course.constructor)
+        // course.enroll()
+        
+
+        //console.log(course.constructor) -- output -->
+                                            // Course(title){
+                                            //     this.title = title,
+                                            //     this.enroll = function(){
+                                            //         console.log('you are successfully enrolled');
+                                            //     }
+                                            // }
+
+        // delete property delete course.title;
+
+        // Passing Operator
+        const course = {
+            title: 'Javascript',
+            enroll() {
+                console.log("You are succesfully Enrolled");
+            }
+        }
+
+        //const course_1  = {...course}
+        const course_1 = Object.assign({},course)
+        course_1.title = "C++"; // {title: 'C++', enroll: ƒ}
+        const course_2 = Object.assign({},course)
+        course_2.title = "JAVA";
+    </script>
+</body>
+</html>
+

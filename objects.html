@@ -6,78 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // let lecture = 10;
-        // let section = 3;
-        // let title = 'Javascript';
+    //Excersises using Objects
+    // itemNmae
+    //price
+    //discount
+    //itemCode
+<script>
+    const product = {
+    itemName: "Flower",
+    price: 50,
+    discount: 20,
+    itemCode: 'F40'
+}
 
-        // //Its not a efficient method to declare objects
-        // const course = {
-        //     lecture: 10,
-        //     section: 3,
-        //     title: 'Javascript',
-        //     notes: {
-        //         introduction: "Welcome to Js Course"
-        //     },
-        //     enroll() {
-        //         console.log('you are successfully enrolled');
-        //     }
-        // }
+function createProduct(name,price,discount,itemCode){
+    return {
+        itemName: name,
+        price: price,
+        discount: discount,
+        itemCode: itemCode
+    }
+}
 
-        // course.enroll()
-        // console.log(course)
+const football = createProduct('football',400,10, 'F30');
 
+function Product(name,price,discount,itemCode){
+    this.itemName = name;
+    this.price = price;
+    this.discount = discount;
+    this.itemCode = itemCode;
+    this.discountValue = function(){
+        return price = discount/100;
+    }
+}
 
-
-        //Factory Function  <naming convention>
-        // function createCourse(title){
-        //     return {
-        //         title: title,
-        //         enroll() {
-        //             console.log("You are succesfully enrolled");
-        //         }
-        //     }
-        // }
+const mobile = new Product('Oneplus Nord' , 30000, 5 , 'DP20')
 
 
-        // Constructor Function
+</script>
 
-        // function Course(title){
-        //     this.title = title,
-        //     this.enroll = function(){
-        //         console.log('you are successfully enrolled');
-        //     }
-        // }
-        
-        // const course = new Course('Javascript'); // new keyword point to an empty object
-        // console.log(course.constructor)
-        // course.enroll()
-        
 
-        //console.log(course.constructor) -- output -->
-                                            // Course(title){
-                                            //     this.title = title,
-                                            //     this.enroll = function(){
-                                            //         console.log('you are successfully enrolled');
-                                            //     }
-                                            // }
-
-        // delete property delete course.title;
-
-        // Passing Operator
-        const course = {
-            title: 'Javascript',
-            enroll() {
-                console.log("You are succesfully Enrolled");
-            }
-        }
-
-        //const course_1  = {...course}
-        const course_1 = Object.assign({},course)
-        course_1.title = "C++"; // {title: 'C++', enroll: ƒ}
-        const course_2 = Object.assign({},course)
-        course_2.title = "JAVA";
-    </script>
 </body>
 </html>
 
